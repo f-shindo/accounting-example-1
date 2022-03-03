@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from TransactionGet import tx_get
+from GetTransaction import tx_get
 
 app = Flask(__name__)
 
