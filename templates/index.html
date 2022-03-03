@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{title}}</h1>
+
+    <form action="/", method="POST", enctype=multipart/form-data>
+        <input type="text" id="nw" name="nw" placeholder="0x...">
+        <select name="list_data">
+            <option>Ethereum</option>
+            <option>Polygon</option>
+            <option>Gnosis</option>
+            <option>Shiden</option>
+        </select>
+        <input type="submit">
+    </form>
+
+    <h1>トランザクション確認</h1>
+    <ul>
+        <li>chain:{{ arr[0] }}</li>
+        <li>送信元アドレス:{{ arr[1] }}</li>
+        <li>送信先アドレス:0x{{ arr[2] }}</li>
+        <li>送信額:{{ arr[3] }}</li>
+        <li>トークン名:{{ arr[4] }}</li>
+        <li>トークンシンボル:{{ arr[5] }}</li>
+    </ul>
+
+</body>
+</html>
