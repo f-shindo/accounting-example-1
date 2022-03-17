@@ -72,11 +72,23 @@ $ gcloud config set project <PROJECT_IDを入力>
 
 ### デプロイ
 
+Linux や Mac
+
 ```console
 gcloud run deploy --source .\
     --set-env-vars ETH='https://mainnet.infura.io/v3/取得したインフラキー'\
     --set-env-vars POL='https://rpc-mainnet.matic.network'\
     --set-env-vars GNO='https://rpc.xdaichain.com/'\
+    --set-env-vars SDN='https://rpc.shiden.astar.network:8545/'
+```
+
+Windows
+
+```console
+gcloud run deploy --source .^
+    --set-env-vars ETH='https://mainnet.infura.io/v3/取得したインフラキー'^
+    --set-env-vars POL='https://rpc-mainnet.matic.network'^
+    --set-env-vars GNO='https://rpc.xdaichain.com/'^
     --set-env-vars SDN='https://rpc.shiden.astar.network:8545/'
 ```
 
