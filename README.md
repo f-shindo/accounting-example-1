@@ -17,13 +17,13 @@ $ export GNO='https://rpc.xdaichain.com/'
 $ export SDN='https://rpc.shiden.astar.network:8545/'
 ```
 
-Windows
+Windows(PowerShell を想定)
 
 ```console
-$ set ETH='https://mainnet.infura.io/v3/取得したインフラキー'
-$ set POL='https://rpc-mainnet.matic.network'
-$ set GNO='https://rpc.xdaichain.com/'
-$ set SDN='https://rpc.shiden.astar.network:8545/'
+$ $Env:ETH='https://mainnet.infura.io/v3/取得したインフラキー'
+$ $Env:POL='https://rpc-mainnet.matic.network'
+$ $Env:GNO='https://rpc.xdaichain.com/'
+$ $Env:SDN='https://rpc.shiden.astar.network:8545/'
 ```
 
 ### 起動
