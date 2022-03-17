@@ -26,6 +26,11 @@ $ set SDN='https://rpc.shiden.astar.network:8545/'
 ```console
 $ python main.py
 ```
+Dockerを使う場合
+```console
+$ docker build -t example1 .
+$ docker run --rm -p 8080:8080 -e PORT=8080 example1
+```
 
 ### 動作確認
 次のURLにアクセスしてください。
@@ -58,7 +63,9 @@ $ gcloud run deploy --source .
 ```
 
 ```
-Service name:好きな名前を入力
+Service name (accounting-example-1):自分の名前を入力(例:shindo)
 Please specify a region:3(asia-northeast1)を選択
+Allow unauthenticated invocations to [accounting-example-2]:y　を選択
+
 ```
 Service URLが出てくるのでアクセスし挙動を確認してください。
