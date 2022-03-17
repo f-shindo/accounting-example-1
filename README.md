@@ -1,12 +1,15 @@
 # accounting-example-1
 
-経理ラボ用に作成したERC20の送信内容を簡易的にチェックするツールです。
+経理ラボ用に作成した ERC20 の送信内容を簡易的にチェックするツールです。
 
-## ローカル環境でのTest
+## ローカル環境での Test
+
 ### 環境設定
+
 ローカルでのテスト時は、それぞれの端末で環境変数をセットしてください。
 
-LinuxやMac
+Linux や Mac
+
 ```console
 $ export ETH='https://mainnet.infura.io/v3/取得したインフラキー'
 $ export POL='https://rpc-mainnet.matic.network'
@@ -15,6 +18,7 @@ $ export SDN='https://rpc.shiden.astar.network:8545/'
 ```
 
 Windows
+
 ```console
 $ set ETH='https://mainnet.infura.io/v3/取得したインフラキー'
 $ set POL='https://rpc-mainnet.matic.network'
@@ -23,41 +27,51 @@ $ set SDN='https://rpc.shiden.astar.network:8545/'
 ```
 
 ### 起動
+
 ```console
 $ python main.py
 ```
-Dockerを使う場合
+
+Docker を使う場合
+
 ```console
 $ docker build -t example1 .
-$ docker run -e ETH_KEY　--rm -p 8080:8080 -e PORT=8080 example1
+$ docker run --rm -p 8080:8080 -e PORT=8080 -e ETH -e POL -e GNO -e SDN example1
 ```
 
 ### 動作確認
-次のURLにアクセスしてください。
+
+次の URL にアクセスしてください。
 
 http://localhost:8080/
 
-## Cloud Runへのデプロイ
-事前に講師までGoogleアカウントをご連絡ください。
+## Cloud Run へのデプロイ
+
+事前に講師まで Google アカウントをご連絡ください。
 
 ### Cloud SDK のインストール
-Cloud SDKを次のURLからインストールしてください。
+
+Cloud SDK を次の URL からインストールしてください。
 
 https://cloud.google.com/sdk/docs/install?hl=ja
 
-### GCPへの接続
+### GCP への接続
+
 ```console
 $ gcloud auth login
 ```
+
 ブラウザが立ち上がるので、内容を確認して承認してください。
 
 ### プロジェクトの選択
+
 ```console
 $ gcloud projects list
 $ gcloud config set project <PROJECT_IDを入力>
 ```
 
 ### デプロイ
+
 ```console
 $ gcloud run deploy --source .
 ```
@@ -65,7 +79,8 @@ $ gcloud run deploy --source .
 ```
 Service name (accounting-example-1):自分の名前を入力(例:shindo)
 Please specify a region:3(asia-northeast1)を選択
-Allow unauthenticated invocations to [accounting-example-2]:y　を選択
+Allow unauthenticated invocations to [accounting-example-1]:yを選択
 
 ```
-Service URLが出てくるのでアクセスし挙動を確認してください。
+
+Service URL が出てくるのでアクセスし挙動を確認してください。
