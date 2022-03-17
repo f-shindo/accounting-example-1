@@ -29,7 +29,7 @@ $ python main.py
 Dockerを使う場合
 ```console
 $ docker build -t example1 .
-$ docker run --rm -p 8080:8080 -e PORT=8080 example1
+$ docker run -e ETH_KEY　--rm -p 8080:8080 -e PORT=8080 example1
 ```
 
 ### 動作確認
