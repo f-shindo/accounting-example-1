@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from GetTransaction import tx_get
+import os
 
 app = Flask(__name__)
 
@@ -19,4 +20,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get('PORT', 8080)))
