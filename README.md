@@ -15,6 +15,7 @@ $ export ETH='https://mainnet.infura.io/v3/取得したインフラキー'
 $ export POL='https://rpc-mainnet.matic.network'
 $ export GNO='https://rpc.xdaichain.com/'
 $ export SDN='https://rpc.shiden.astar.network:8545/'
+$ export ASTR='https://evm.astar.network'
 ```
 
 Windows(PowerShell を想定)
@@ -24,6 +25,7 @@ $ $Env:ETH='https://mainnet.infura.io/v3/取得したインフラキー'
 $ $Env:POL='https://rpc-mainnet.matic.network'
 $ $Env:GNO='https://rpc.xdaichain.com/'
 $ $Env:SDN='https://rpc.shiden.astar.network:8545/'
+$ $Env:ASTAR='https://evm.astar.network'
 ```
 
 ### 起動
@@ -79,7 +81,8 @@ gcloud run deploy --source .\
     --set-env-vars ETH='https://mainnet.infura.io/v3/取得したインフラキー'\
     --set-env-vars POL='https://rpc-mainnet.matic.network'\
     --set-env-vars GNO='https://rpc.xdaichain.com/'\
-    --set-env-vars SDN='https://rpc.shiden.astar.network:8545/'
+    --set-env-vars SDN='https://rpc.shiden.astar.network:8545/'\
+    --set-env-vars ASTR='https://evm.astar.network'
 ```
 
 Windows
@@ -89,7 +92,8 @@ gcloud run deploy --source .^
     --set-env-vars ETH='https://mainnet.infura.io/v3/取得したインフラキー'^
     --set-env-vars POL='https://rpc-mainnet.matic.network'^
     --set-env-vars GNO='https://rpc.xdaichain.com/'^
-    --set-env-vars SDN='https://rpc.shiden.astar.network:8545/'
+    --set-env-vars SDN='https://rpc.shiden.astar.network:8545/'^
+    --set-env-vars ASTR=''https://evm.astar.network''
 ```
 
 ```

@@ -6,6 +6,7 @@ ETH = os.environ['ETH']
 POL = os.environ['POL']
 GNO = os.environ['GNO']
 SDN = os.environ['SDN']
+ASTR = os.environ['ASTR']
 
 
 def tx_get(txnid, chain):
@@ -18,6 +19,8 @@ def tx_get(txnid, chain):
         w3 = Web3(Web3.HTTPProvider(GNO))
     elif chain == 'Shiden':
         w3 = Web3(Web3.HTTPProvider(SDN))
+    elif chain == 'Astar':
+        w3 = Web3(Web3.HTTPProvider(ASTR))
     else:
         print('error')
 
