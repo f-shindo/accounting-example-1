@@ -35,5 +35,8 @@ def tx_get(txnid, chain):
     decimals = token.functions.decimals().call()
     volume = Decimal(decoded[1]['amount']) / 10 ** decimals
     volume = "{:,}".format(volume)
-
-    return [chain, sender, receiver, volume, token.functions.name().call(), token.functions.symbol().call()]
+    if w3.eth.getTransactionReceipt(txnid).status == 1:
+        is_success = 'トランザクション成功'
+    else:
+        is_success = 'トランザクション失敗'
+    return [chain, sender, receiver, volume, token.functions.name().call(), token.functions.symbol().call()], is_success

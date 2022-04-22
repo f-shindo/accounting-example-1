@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>{{title}}</h1>
-
     <form action="/", method="POST", enctype=multipart/form-data>
         <input type="text" id="nw" name="nw" placeholder="0x...">
         <select name="list_data">
@@ -22,6 +21,7 @@
     </form>
 
     <h1>トランザクション確認</h1>
+    <h2>{{is_success}}</h2>
     <ul>
         <li>chain:{{ arr[0] }}</li>
         <li>送信元アドレス:{{ arr[1] }}</li>

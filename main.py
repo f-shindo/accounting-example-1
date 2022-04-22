@@ -15,8 +15,8 @@ def index():
     else:
         a = request.form.get('nw')
         b = request.form.get('list_data')
-        arr = tx_get(a, b)
-        return render_template('index.html', arr=arr, title=title)
+        arr, is_success = tx_get(a, b)
+        return render_template('index.html', arr=arr, is_success = is_success, title=title)
 
 
 if __name__ == '__main__':
